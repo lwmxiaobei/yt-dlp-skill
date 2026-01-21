@@ -45,6 +45,8 @@ User: Extract the audio from https://youtu.be/...
 
 ## Available Scripts
 
+Note: Scripts are located in the `scripts/` directory
+
 ### download_video.py
 
 Main video downloader with quality and format options.
@@ -52,17 +54,17 @@ Main video downloader with quality and format options.
 **Usage**:
 ```bash
 # Download video
-download_video.py <url> -o <output_dir>
+scripts/download_video.py <url> -o <output_dir>
 
 # Download with specific quality
-download_video.py <url> --quality 720p
-download_video.py <url> --quality audio  # For audio only
+scripts/download_video.py <url> --quality 720p
+scripts/download_video.py <url> --quality audio  # For audio only
 
 # Custom format selector
-download_video.py <url> --format "bestvideo[height<=1080]+bestaudio/best"
+scripts/download_video.py <url> --format "bestvideo[height<=1080]+bestaudio/best"
 
 # Extract info only
-download_video.py <url> --info-only
+scripts/download_video.py <url> --info-only
 ```
 
 **Quality options**: `best`, `1080p`, `720p`, `480p`, `audio`
@@ -74,13 +76,13 @@ Extract audio from videos in various formats.
 **Usage**:
 ```bash
 # Extract as MP3 (default)
-extract_audio.py <url> -o <output_dir>
+/scripts/extract_audio.py <url> -o <output_dir>
 
 # Extract as M4A
-extract_audio.py <url> --format m4a
+/scripts/extract_audio.py <url> --format m4a
 
 # Custom quality
-extract_audio.py <url> --quality 320
+/scripts/extract_audio.py <url> --quality 320
 ```
 
 **Formats**: `mp3`, `m4a`, `opus`, `flac`, `wav`
@@ -92,13 +94,13 @@ Extract video URLs from text or files.
 **Usage**:
 ```bash
 # Extract from text argument
-extract_urls.py "Check https://youtube.com/watch?v=..."
+/scripts/extract_urls.py "Check https://youtube.com/watch?v=..."
 
 # Extract from file
-extract_urls.py <file_path>
+/scripts/extract_urls.py <file_path>
 
 # Read from stdin
-cat file.txt | extract_urls.py
+cat file.txt | /scripts/extract_urls.py
 ```
 
 ## Video Platform Support
