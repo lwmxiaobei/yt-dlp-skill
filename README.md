@@ -12,4 +12,4 @@ npx skill add lwmxiaobei/yt-dlp-skill
 ```
 ## 使用示例
 直接在各个 agent 里面输入 `/yt-dlp <url>` 即可。
-或者输入"帮我下载视频 <url>"
+或者输入`帮我下载视频 <url>`
